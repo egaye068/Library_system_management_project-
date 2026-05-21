@@ -70,11 +70,11 @@ CREATE TABLE books (
 DROP TABLE IF EXISTS issued_status 
 CREATE TABLE issued_status (
 	issued_id	VARCHAR(20) PRIMARY KEY, 
-	issued_member_id	VARCHAR(20), FK
+	issued_member_id	VARCHAR(20), 
 	issued_book_name VARCHAR(100),
 	issued_date	 DATE,
-	issued_book_isbn	VARCHAR(30), FK
-	issued_emp_id VARCHAR(20) FK
+	issued_book_isbn	VARCHAR(30), 
+	issued_emp_id VARCHAR(20) 
 	);
 ```
 ```sql
