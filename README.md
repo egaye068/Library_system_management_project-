@@ -15,3 +15,7 @@ This project demonstrates the implementation of a Library Management System usin
 2. **CRUD Operations**: Perform Create, Read, Update, and Delete operations on the data.  
 3. **CTAS (Create Table As Select)**: Utilize CTAS to create new tables based on query results.  
 
+## Project Structure 
+
+<img width="882" height="547" alt="Image 2" src="https://github.com/user-attachments/assets/de275a68-7e9d-409c-9787-2cbba9d6b487" />
+
