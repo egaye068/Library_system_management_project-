@@ -2,8 +2,8 @@
 
 ## Project Overview 
 
--**Project Titel**: Library management system     
--**Level**: Beginner 
+- **Project Titel**: Library management system     
+- **Level**: Beginner 
 
 This project demonstrates the implementation of a Library Management System using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries. The goal is to showcase skills in database design, manipulation, and querying.
 
@@ -210,5 +210,8 @@ ON ist.issued_id = rs.issued_id
 WHERE rs.return_id IS NULL 
 ```
 
+## Conclusion 
+
+This project demonstrates the application of SQL skills in creating and managing a library management system. It includes database setup, data manipulation, providing a solid foundation for data management and analysis.
 
 
