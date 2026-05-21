@@ -145,3 +145,70 @@ JOIN books as b
 	on ist.issued_book_isbn = b.isbn 
 GROUP BY 1, 2 
 ```
+
+4. ### Data Analysis & Findings
+   
+The following SQL queries were used to address specific questions:
+
+**Task 7. Retrieve All Books in a Specific Category:**
+
+```sql
+SELECT * FROM books 
+WHERE Category = "History"
+```
+**Task 8: Find Total Rental Income by Category**
+
+```sql
+SELECT 
+    b.category,
+    SUM(b.rental_price),
+    COUNT(*)
+FROM 
+issued_status as ist
+JOIN
+books as b
+ON b.isbn = ist.issued_book_isbn
+GROUP BY 1
+```
+**Task 9: List Members Who Registered in the Last 180 Days**
+
+```sql
+SELECT * FROM members 
+WHERE reg_date >= current_date - interval 180 day
+```
+
+**Task 10: List Employees with Their Branch Manager's Name and their branch details**
+
+```sql
+SELECT 
+	e1.emp_id,
+	e1.emp_name, 
+	e1.position, 
+	e1.salary,
+	b.*, 
+	e2.emp_name as manger 
+FROM employees as e1 
+JOIN branch as b 
+	On b.branch_id = e1.branch_id 
+JOIN employees as e2 
+	on e2.emp_id = b.manager_id
+```
+
+**Task 11. Create a Table of Books with Rental Price Above a Certain Threshold**
+
+```sql
+CREATE TABLE expensive_books as 
+SELECT *  FROM books
+WHERE rental_price > 7
+```
+**Task 12: Retrieve the List of Books Not Yet Returned**
+
+```sql
+SELECT * FROM issued_status as ist 
+LEFT JOIN return_status as rs 
+ON ist.issued_id = rs.issued_id
+WHERE rs.return_id IS NULL 
+```
+
+
+
