@@ -17,7 +17,7 @@ This project demonstrates the implementation of a Library Management System usin
 
 ## Project Structure 
 
-1. **Database Setup**
+1. ### Database Setup**
 <img width="882" height="547" alt="Image 2" src="https://github.com/user-attachments/assets/de275a68-7e9d-409c-9787-2cbba9d6b487" />
 
 - **Database Creation**: Create database named Library_system_management_project  
@@ -87,3 +87,10 @@ CREATE TABLE return_status (
 	return_book_isbn VARCHAR(20)
 );
 ```
+
+2. ### CRUD Operations
+
+- **Create**: Inserted sample records into the books table.
+- **Read**: Retrieved and displayed data from various tables.
+- **Update**: Updated records in the employees table.
+- **Delete**: Removed records from the members table as needed.
