@@ -130,3 +130,18 @@ SELECT
     GROUP BY issued_member_id
     HAVING COUNT(*)> 1
 ```
+
+3. ### CRUD (Create Table As SELECT)
+
+**Task 6: Create Summary Tables**: Used CTAS to generate new tables based on query results - each book and total book_issued_cnt
+
+```SQL
+SELECT 
+	b.isbn,
+	b.book_title,
+	count(ist.issued_id) as issued_count 
+FROM issued_status as ist 
+JOIN books as b 
+	on ist.issued_book_isbn = b.isbn 
+GROUP BY 1, 2 
+```
